@@ -15,11 +15,13 @@ llms.txt             Plain-text summary for AI answer engines (2026 AEO practice
 ```
 
 ## 1. Publish to GitHub Pages
-1. Create a new GitHub repository (e.g. `fueledbymeesch-site`).
-2. Upload all files in this folder to the repository root (keep the folder structure).
-3. In the repo, go to **Settings → Pages**.
-4. Under "Build and deployment," set Source to **Deploy from a branch**, branch `main`, folder `/ (root)`.
-5. Save. GitHub will give you a `https://<username>.github.io/<repo>` URL within a minute or two.
+This repo includes a deploy workflow at `.github/workflows/deploy.yml`, so publishing is a one-time settings change:
+1. Push these files to the repository's `main` branch (keep the folder structure).
+2. In the repo, go to **Settings → Pages**.
+3. Under "Build and deployment," set Source to **GitHub Actions**.
+4. Every push to `main` now builds and deploys the site automatically. Watch progress under the repo's **Actions** tab; the live URL appears there and in **Settings → Pages** within a minute or two.
+
+> Prefer no workflow? You can instead set Source to **Deploy from a branch** → branch `main`, folder `/ (root)`. Either option works — pick one, not both.
 
 ## 2. Connect your custom domain (fueledbymeesch.com)
 1. The `CNAME` file already contains `www.fueledbymeesch.com` — don't delete it.
